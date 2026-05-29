@@ -1325,8 +1325,12 @@ window.addEventListener('load',()=>{
 const html=document.documentElement;
 const themeBtn=document.getElementById('themeBtn');
 // Restore saved preference
-const saved=localStorage.getItem('yd-theme')||'light';
-html.setAttribute('data-theme',saved);
+const saved = localStorage.getItem('yd-theme') ?? 'light';
+if (!localStorage.getItem('yd-theme')) {
+  html.setAttribute('data-theme', 'light');
+} else {
+  html.setAttribute('data-theme', saved);
+}
 themeBtn.addEventListener('click',()=>{
   const cur=html.getAttribute('data-theme');
   const next=cur==='dark'?'light':'dark';
