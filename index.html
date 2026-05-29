@@ -67,7 +67,8 @@
 
 /* ── RESET & BASE ── */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;scrollbar-width:none;}
+html::-webkit-scrollbar{display:none;}
 body{
   background:var(--bg-void);color:var(--text);
   font-family:var(--font-b);font-size:16px;
