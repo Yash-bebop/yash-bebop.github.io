@@ -283,12 +283,10 @@ nav.scrolled{
 .h-name-2{
   font-family:var(--font-d);
   font-size:clamp(2.2rem,5.8vw,7.5rem);
-  font-weight:300;letter-spacing:-.01em;line-height:.92;
+  font-weight:800;letter-spacing:-.04em;line-height:.92;
   display:block;
-  background:linear-gradient(125deg,var(--g-blue) 0%,var(--g-red) 30%,var(--g-yellow) 60%,var(--g-green) 100%);
-  background-size:200% 200%;
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  animation:riseIn 1s .52s var(--ease-out) forwards, gradShift 6s ease-in-out infinite 1.8s;
+  color:var(--text);
+  animation:riseIn 1s .52s var(--ease-out) forwards;
   opacity:0;
 }
 @keyframes gradShift{0%,100%{background-position:0% 50%;}50%{background-position:100% 50%;}}
